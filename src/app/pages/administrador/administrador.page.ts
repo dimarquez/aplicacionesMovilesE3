@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FireService } from 'src/app/services/fire.service';
 import { ValidacionesService } from 'src/app/services/validaciones.service';
 
+
 @Component({
   selector: 'app-administrador',
   templateUrl: './administrador.page.html',

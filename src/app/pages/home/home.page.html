@@ -1,14 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-button slot="start" routerlink><ion-icon name="person-circle-outline"></ion-icon></ion-button>
-    <p class="centrar">Bienvenido {{this.usuarios.tipo_usuario}}  <br>
-      {{this.usuarios.nombre}} {{this.usuarios.ap_paterno}} </p>
+    <ion-button slot="start" routerLink="/perfil"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
+    <p class="centrar">{{this.usuarios.tipo_usuario}}</p>
     <ion-button slot="end" (click)="logout()"><ion-icon name="chevron-forward-circle-outline"></ion-icon></ion-button>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div>
+    <ion-card>
+      <ion-card-title class="centrar">Bienvenido {{this.usuarios.tipo_usuario}}</ion-card-title>
+      <ion-card-title class="centrar">{{this.usuarios.nombre}} {{this.usuarios.ap_paterno}}</ion-card-title>
+      <p class="centrar">¿Como se encuentra?</p>
+      <img src="../../../assets/img/smile.png" alt="smile" width="40%">
+
+    </ion-card>
+  </div>
 
   <ion-tabs>
     <ion-tab-bar slot="bottom">
@@ -33,8 +41,15 @@
         <ion-tab-button tab="miscursos" *ngIf="this.usuarios.tipo_usuario == 'alumno'">
           <ion-icon name="library-outline"></ion-icon>
           <ion-label>Mis cursos</ion-label>
-          
+        
+        <!-- TAB PERFIL
         </ion-tab-button>
+          <ion-tab-button tab="perfil/{{usuario.id}}">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label>Perfil</ion-label>
+        </ion-tab-button>-->
+
+        
       <!-- <ion-tab-button tab="qrcode" *ngIf="KEY_PERSONAS.tipo_usuario == 'docente'">
         <ion-icon name="file-tray-stacked-outline"></ion-icon>
         <ion-label>Mis asignaturas</ion-label>

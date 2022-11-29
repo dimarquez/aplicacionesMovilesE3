@@ -23,6 +23,7 @@ const routes: Routes = [
         path: 'miscursos',
         loadChildren: () => import('../miscursos/miscursos.module').then( m => m.MiscursosPageModule)
       },
+      
     ]
 
   }
